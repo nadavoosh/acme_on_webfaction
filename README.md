@@ -40,7 +40,8 @@ git clone git@github.com:nadavoosh/acme_on_webfaction.git
 cd acme_on_webfaction
 ```
 2. Update `~/src/acme_on_webfaction/autorenew.sh` with your webfaction username and password.
-3. Update `certs.py` with the correct information for each cert you need.  
+  * You can run `git update-index --assume-unchanged autorenew.sh` to tell git not to pick up these changes.
+3. Update `certs.py` with the correct information for each cert you need. 
 4. You can test out the script by running it yourself: 
 ```
 . ~/src/acme_cert_autorenew/autorenew.sh
