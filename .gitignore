@@ -3,3 +3,4 @@ autorenew.sh
 # dont accidentally commit cert info to git:
 certs.py
 
+*.pyc
