@@ -24,11 +24,11 @@ curl https://get.acme.sh | sh
 ```
 2. Issue a test cert for your domains
 ```
-. acme.sh --test --issue -d mydomain.com -d www.mydomain.com -w ~/webapps/mydomain_root/
+acme.sh --test --issue -d mydomain.com -d www.mydomain.com -w ~/webapps/mydomain_root/
 ```
 3. If that worked, issue a non-test cert:
 ```
-. acme.sh --issue -d mydomain.com -d www.mydomain.com -w ~/webapps/mydomain_root/
+acme.sh --issue -d mydomain.com -d www.mydomain.com -w ~/webapps/mydomain_root/
 ```
 4. Now paste the outputs of that command in your webfaction SSL cert panel:
 
