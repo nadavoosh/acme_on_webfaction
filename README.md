@@ -31,6 +31,12 @@ acme.sh --test --issue -d mydomain.com -d www.mydomain.com -w ~/webapps/mydomain
 acme.sh --issue -d mydomain.com -d www.mydomain.com -w ~/webapps/mydomain_root/
 ```
 4. Now paste the outputs of that command in your webfaction SSL cert panel:
+5. Validate by navigating to your site in a browser. If the site is still not trusted, check to see which CA issued your cert: 
+```
+openssl x509 -issuer -noout -in ~/.acme.sh/mydomain.com/ca.cer
+```
+The output should be something like `issuer= /O=Digital Signature Trust Co./CN=DST Root CA X3`. If you see `issuer= /CN=Fake LE Root X1`, then your cert is still coming from Let's Encrypt's staging server, and it won't work. 
+
 
 ## Auto-Renew
 1. Get our python autorenew code
