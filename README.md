@@ -36,19 +36,19 @@ acme.sh --issue -d mydomain.com -d www.mydomain.com -w ~/webapps/mydomain_root/
 1. Get our python autorenew code
 ```
 cd ~/src
-git clone git@github.com:nadavoosh/acme_on_webfaction.git
-cd acme_on_webfaction
+git clone git@github.com:nadavoosh/acme_wf_autorenew.git
+cd acme_wf_autorenew
 ```
-2. Update `~/src/acme_on_webfaction/autorenew.sh` with your webfaction username and password.
+2. Update `~/src/acme_wf_autorenew/autorenew.sh` with your webfaction username and password.
   * You can run `git update-index --assume-unchanged autorenew.sh` to tell git not to pick up these changes.
 3. Update `certs.py` with the correct information for each cert you need. 
 4. You can test out the script by running it yourself: 
 ```
-. ~/src/acme_cert_autorenew/autorenew.sh
+. ~/src/acme_wf_autorenew/autorenew.sh
 ```
 5. Update the cronjob that acme created to run `autorenew.sh` instead, do `crontab -e` and edit the file so that you have:
 ```
-40 0 * * * . ~/src/acme_cert_autorenew/autorenew.sh > /dev/null
+40 0 * * * . ~/src/acme_wf_autorenew/autorenew.sh > /dev/null
 ```
 You can verify with `crontab -l`.
 
