@@ -52,6 +52,9 @@ cd acme_wf_autorenew
 ```
 You can verify with `crontab -l`.
 
+## TODOs
+1. Add `--force` command line option to force renewal
+
 ## Source Material:
 https://blog.rarepebble.com/https-on-webfaction/ for the bulk of the python script
 https://community.webfaction.com/questions/21246/trying-to-use-lets-encrypt-using-acmesh-need-socat-tools
