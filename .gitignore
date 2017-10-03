@@ -1,0 +1,5 @@
+# dont accidentally commit usernames, passwords to git:
+autorenew.sh
+# dont accidentally commit cert info to git:
+certs.py
+
